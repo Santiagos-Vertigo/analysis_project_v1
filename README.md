@@ -1,18 +1,26 @@
 # analysis_project_v1
 
-analysis_project/
-├── data/
-│   ├── raw/
-│   └── processed/
+analysis_project_v1/
+├── analysis-env/                  # Python virtual environment (IGNORED)
 │
-├── notebooks/
-│   ├── 01_exploration.ipynb
-│   ├── 02_cleaning.ipynb
-│   ├── 03_analysis.ipynb
-│   └── 04_visualization.ipynb
+├── analysis_v1/                   # Analysis iteration v1
+│   ├── notebooks/
+│   │   └── 01_exploration.ipynb
+│   │
+│   └── scripts/
+│       └── (future: clean_data.py, utils.py, etc.)
 │
-├── scripts/
-│   ├── clean_data.py
-│   └── analyze_data.py
+├── data/                          # Shared data layer
+│   ├── raw/                       # Immutable source data (IGNORED)
+│   │   └── vega-data/
+│   │       ├── airports.csv
+│   │       ├── flights-*.csv
+│   │       └── ...
+│   │
+│   └── processed/                 # Derived outputs (IGNORED)
+│       └── analysis_v1/
+│           └── (generated files)
 │
-└── requirements.txt
+├── .gitignore                     # Git ignore rules (TRACKED)
+├── README.md                      # Project documentation
+└── requirements.txt               # Python dependencies (TRACKED)
