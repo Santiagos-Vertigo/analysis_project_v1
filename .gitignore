@@ -6,6 +6,7 @@ __pycache__/
 *.egg-info/
 
 # ===== Virtual Environments =====
+analysis-env/
 .venv/
 venv/
 env/
